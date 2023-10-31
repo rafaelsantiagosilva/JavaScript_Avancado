@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>002: Funções Contrustoras</title>
+</head>
+
+<body>
+    <script>
+        // Funções que criam objetos
+
+        function Ventilador(velMax) {
+            this.velocidadeMaxima = velMax;
+            this.ligado = false;
+        }
+        
+        // Criando uma instância de um objeto do tipo "Ventilador", usando new
+        const ventilador1 = new Ventilador(3);
+
+        console.log(ventilador1.velocidadeMaxima);
+
+        ventilador1.cor = "branco";
+        console.log(ventilador1.cor);
+
+        // Criando um novo método no objeto criado pela função construtora
+        ventilador1.ligaDesliga = function(){
+            if(this.ligado){
+                this.ligado = false;
+            }
+            else{
+                this.ligado = true;
+            }
+
+            return this.ligado;
+        }
+        
+        // Ativando as funções
+        ventilador1.ligaDesliga();
+        console.log(ventilador1.ligado);
+        ventilador1.ligaDesliga();
+        console.log(ventilador1.ligado);
+
+        console.log(ventilador1);
+    </script>
+</body>
+
+</html>
