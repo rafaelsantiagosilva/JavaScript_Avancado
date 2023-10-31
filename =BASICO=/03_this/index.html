@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>003: this</title>
+</head>
+<body>
+    <script>
+        // A palavra this é usada para se referir aos objetos
+        // Quando usamos ela sem nenhuma função, estará APONTANDO PARA global OU window
+
+        // Usando em um método
+        const o = {
+            prop: 100,
+            f: function(){
+                return this.prop; // Tá retornando a propridade prop do objeto
+            }
+        }
+
+        console.log(o.f());
+
+        // Nas arrows functions
+        // Global
+        const arrowFunctionThis = ()=>{console.log(this)};
+
+        // Objeto
+        const obj1 = {
+            ex1: "exemplo",
+            mostraThis: function() {
+                const f = (() => this)()
+                console.log(f)
+            }
+        }
+    </script>
+</body>
+</html>
