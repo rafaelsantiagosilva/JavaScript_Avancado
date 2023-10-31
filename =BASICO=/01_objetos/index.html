@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>001 :Objetos (Objects)</title>
+</head>
+<body>
+    <script>
+        const objetoTeste = {
+            prop1: "Sou uma propriedade que será usada usando dot notation", // Variável do objeto == propriedade
+            metodo: function () {
+                return "Sou o retorno de um método, ou seja, uma função dentro de um objeto"
+            }
+        };
+
+        // dotNotation = algo.fazIsso()
+        console.log(objetoTeste.prop1);
+        console.log(objetoTeste.metodo());
+
+        // Declarando fora do objeto
+        objetoTeste.prop2 = "Sou outra propriedade, string";
+        objetoTeste.metodo2 = () => "Sou o retorno de outro método";
+        objetoTeste.metodo3 = function outraFuncao(){return 0};
+        
+        // Declarando com bracket notation
+        objetoTeste['prop3'] = "Sou OUTRA propriedade bla bla bla"
+        objetoTeste['metodo4'] = () => "Sou RETORNO DE OUTRO MÉTODO"
+
+        console.log(objetoTeste['prop3']);
+        console.log(objetoTeste['metodo4']());
+
+        /* 
+            Tudo no JS é objeto e tudo dentro do objeto, no JS, é propriedade
+        */
+    </script>
+</body>
+
+</html>
