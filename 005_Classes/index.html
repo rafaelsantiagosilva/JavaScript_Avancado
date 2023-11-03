@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>005: "Classes"</title>
+</head>
+<body>
+    <script>
+        // Não existem classes, SÃO SÓ OBJETOS, DE NOVO!
+        class Carro{
+            constructor(nome, ano){
+                this.nome = nome;
+                this.ano = ano;
+            }
+        }
+
+        const carro1 = new Carro("Audi", 2020);
+        const carro2 = new Carro("Ferrari", 2010);
+
+        console.log(carro1, carro2);
+    </script>
+</body>
+</html>
