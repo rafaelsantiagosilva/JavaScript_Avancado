@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>004: Call, Apply e Bind</title>
+</head>
+<body>
+    <script>
+
+        // Bind
+        function thisBindExemplo(){
+            console.log(this);
+        }
+
+        const obj = {exemplo: "exemplo"};
+
+        thisBindExemplo = thisBindExemplo.bind(obj);
+
+        thisBindExemplo(); // Vai funcionar como se ela estivesse dentro do objeto
+
+        // Call
+        const obj2 = {exemplo1: "exemplo1", mostraThis: function thisCallExample(){
+            console.log(this);
+        }}
+
+        obj2.mostraThis();
+
+        const obj3 = {exemplo2: "exemplo2"};
+
+        obj2.mostraThis.call(obj3); // Vai funcionar como se fosse o obj3
+
+        // Apply -> Usa um array
+
+    </script>
+</body>
+</html>
