@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>003: Immediately Invoked Function Expression</title>
+</head>
+<body>
+    <script>
+        // É como se criasse uma função e já fosse chamada
+
+        // Sintaxe
+
+        const helloWorld = (
+            function(){
+                alert('Hello World!')
+                const meuNome = "Meu nome é Rafael!";
+                return meuNome; // Retornando a variável desejada
+            }
+        )()
+
+        console.log(helloWorld) // -> Usando o valor dela
+    </script>
+</body>
+</html>
