@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>001: Let e Const</title>
+    </head>
+    <body>
+        <script>
+            if(true){
+                var exposta = "Exposta"; // Global
+                let naoExposta = "Não exposta"; // 'Escopal'
+            }
+
+            console.log(exposta);
+            // console.log(naoExposta); Dá erro!!!
+
+            const naoMeMude = "Sou imutável!";
+
+            // Pode alterar, modificar, atribuir...
+            const arr = [1, 2, 3];
+            arr.push(4);
+            console.log(arr);
+
+            const obj = {a:1, b:2};
+            obj.c = 3;
+            console.log(obj);
+            delete obj.c;
+            console.log(obj);
+        </script>
+    </body>
+</html>
